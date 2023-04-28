@@ -15,19 +15,37 @@
     <main>
         
         <section>
-            <div>Nome passeggero</div>
-            <input type="text" id="user_name" placeholder="Inserisci qui il nome">
-            <div>Chilometri da percorrere</div>
-            <input type="number" id="user_km">
-            <div>Fascia di età</div>
-            <input type="text" id="user_age" placeholder="Inserisci la tua età">
+            <form action="">
+                <!-- Ask user name -->
+                <div>Nome passeggero</div>
+                <input type="text" id="user_name" placeholder="Inserisci qui il nome">
+
+                <!-- Ask user km -->
+                <div>Chilometri da percorrere</div>
+                <input type="number" id="user_km">
+
+                <!-- Ask user age -->
+                <div>Fascia di età</div>
+                <input type="text" id="user_age" placeholder="Inserisci la tua età">
             
-            <div id="invio">invio</div>
-        </section>
+            </form>
+
+        </section>    
+
+         <!-- button section -->
+         <section>
+             <!-- Start button -->
+            <div id="invio" class="button">invio</div> 
+
+            <!-- clean button -->
+            <div id="clean" class="button">Annulla</div>
+         </section>
+           
+       
 
         <section>
-            <div id="demo"></div>
-            <div id="price"></div>
+            <div>i tuoi dati sono <span id="demo"></span></div>
+            <div>il prezzo del tuo biglietto è <span id="price"></span></div>
         </section>
       
     </main>
