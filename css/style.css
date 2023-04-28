@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.text {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
 /* header */
 header {
     height: 100px;
@@ -13,14 +22,99 @@ header {
 
 /* main */
 main {
+    background-color:  #b71b50;
+    padding: 20px 0;
+}
+
+section {
     width: 80%;
-    margin: 0 auto;
+    margin: 15px auto;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+/* console section layout */
+.console {
+    border-radius: 20px;
+   
+}
+
+/* input layout*/
+.input_layout {
+    margin: 40px 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input_item {
+    text-align: center;
+}
+
+.input_item>div {
+    color: #b71b50;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    border: 2px solid#cb5e83;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* button layout */
+.button_layout {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .button {
-    
-    border: 1px solid black;
-    width: fit-content;
+    background-color: #cccbcb;
+    color: #b71b50;
+    font-weight: 800;
+    border: 1px solid #b71b50;
+    border-radius: 10px;
     padding: 10px;
     cursor: pointer;
+}
+.button:hover {
+    background-color: #9f9e9e;
+    border: 1px solid #f49600;
+}
+
+/* Ticket */
+.ticket {
+    height: 300px;
+    display: flex;
+}
+
+.data_user {
+    height: 100%;
+    width: 300px;
+    background-color: #9f9e9e;
+    padding: 50px 30px;
+    text-align: right;
+}
+
+.data_ticket {
+    height: 100%;
+    width: calc( 100% - 300px );
+    padding: 50px 30px;
+    display: flex;
+    gap: 20px;
+    border-right: 1px solid #9f9e9e;
+}
+
+.data_ticket_item {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

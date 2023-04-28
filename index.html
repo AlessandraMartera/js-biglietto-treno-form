@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Train Ticket</title>
 </head>
@@ -12,41 +15,97 @@
     <header>
         <h1>Crea il tuo biglietto del treno</h1>
     </header>
+
     <main>
+
+
+
+        <section class="console">
+
+            <div class="input_layout">
+                <div class="input_item">
+                    <!-- Ask user name -->
+                    <div>Nome</div>
+                    <input type="text" id="user_name" placeholder="Inserisci qui il nome">
+                </div>
+                    
+                <div class="input_item">
+                    <!-- Ask user name -->
+                    <div>Cognome</div>
+                    <input type="text" id="user_Surname" placeholder="Inserisci qui il Cognome">
+                </div>
+                    
+                <div  class="input_item">
+                    <!-- Ask user km -->
+                    <div>Km da percorrere</div>
+                    <input type="number" id="user_km">
+                </div>
+                
+
+                <div  class="input_item"> 
+                    <!-- Ask user age -->
+                    <div>Fascia di età</div>
+                    <input type="text" id="user_age" placeholder="Inserisci la tua età">
+                </div>
+            </div>
+
+            <!-- button section -->
+            <div class="button_layout">
+
+                <!-- Generate button -->
+                <div id="generate" class="button">Genera</div> 
+
+                <!-- clean button -->
+                <div id="clean" class="button">Annulla</div>
+
+            </div>
         
-        <section>
-            <form action="">
-                <!-- Ask user name -->
-                <div>Nome passeggero</div>
-                <input type="text" id="user_name" placeholder="Inserisci qui il nome">
-
-                <!-- Ask user km -->
-                <div>Chilometri da percorrere</div>
-                <input type="number" id="user_km">
-
-                <!-- Ask user age -->
-                <div>Fascia di età</div>
-                <input type="text" id="user_age" placeholder="Inserisci la tua età">
-            
-            </form>
-
-        </section>    
-
-         <!-- button section -->
-         <section>
-             <!-- Start button -->
-            <div id="invio" class="button">invio</div> 
-
-            <!-- clean button -->
-            <div id="clean" class="button">Annulla</div>
-         </section>
-           
-       
-
-        <section>
-            <div>i tuoi dati sono <span id="demo"></span></div>
-            <div>il prezzo del tuo biglietto è <span id="price"></span></div>
         </section>
+            
+
+        <div class="text">
+            Il tuo Biglietto:
+        </div>
+
+        <section class="ticket">
+            <div class="data_user">
+                <h4>
+                    Nome passeggero
+                </h4> 
+                <div id="data"></div>
+            </div>
+            
+            <div class="data_ticket">
+
+                <!-- type Ticket -->
+                <div class="data_ticket_item">
+                    <h4>Offerta</h4>
+                    <div>Standard</div>
+                </div>
+
+                <!-- code user Ticket -->
+                <div class="data_ticket_item">
+                    <h4>Codice passeggero</h4>
+                    <div id="code"></div>
+                </div>
+
+                <!-- cambin number -->
+                <div class="data_ticket_item">
+                    <h4>Cabina</h4>
+                    <div id="cabin"></div>
+                </div>
+                
+                <!-- Price Ticket -->
+                <div  class="data_ticket_item">
+                    <h4>Prezzo biglietto</h4>
+                    <div id="price"></div>
+                </div>
+
+            </div>
+            
+        </section>
+
+
       
     </main>
     <script src="js/script.js"></script>

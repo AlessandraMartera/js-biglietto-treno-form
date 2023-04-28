@@ -40,7 +40,19 @@ function calcTicketPrice () {
   // stamp ticket price
   document.getElementById("price").innerHTML = ticketPrice.toFixed(2) + "€";
 
-  
+  // generate a random CP code
+  let codePasseger = "997";
+  codePasseger = codePasseger + Math.floor(Math.random( ) * 5000);
+
+  console.log(codePasseger);
+  document.getElementById("code").innerHTML = codePasseger;
+
+  // Generate a random number cab
+  let codeCab;
+  codeCab = Math.floor((Math.random( ) * 10) + 1 );
+
+  console.log(codeCab);
+  document.getElementById("cabin").innerHTML = codeCab;
 }
 
 // Generate button
