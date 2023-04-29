@@ -40,6 +40,7 @@ function calcTicketPrice () {
       document.getElementById("ticket_type").innerHTML = `${userAge}`;
   } 
   
+  // Add new Ticket
   document.querySelector(".ticket").classList.add("active");
 
   // stamp ticket price
@@ -79,6 +80,7 @@ cleanInput.addEventListener ( "click",
     document.getElementById("user_km").value = "";
     document.getElementById("user_age").value = "";
 
+    // remove ticket
     document.querySelector(".ticket").classList.remove("active");
 
   }
