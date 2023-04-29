@@ -26,26 +26,31 @@
                 <div class="input_item">
                     <!-- Ask user name -->
                     <div>Nome</div>
-                    <input type="text" id="user_name" placeholder="Inserisci qui il nome">
+                    <input type="text" id="user_name" placeholder="Inserisci qui il nome" required>
                 </div>
                     
                 <div class="input_item">
                     <!-- Ask user name -->
                     <div>Cognome</div>
-                    <input type="text" id="user_Surname" placeholder="Inserisci qui il Cognome">
+                    <input type="text" id="user_Surname" placeholder="Inserisci qui il Cognome" required>
                 </div>
                     
                 <div  class="input_item">
                     <!-- Ask user km -->
                     <div>Km da percorrere</div>
-                    <input type="number" id="user_km">
+                    <input type="number" id="user_km" required>
                 </div>
                 
 
                 <div  class="input_item"> 
                     <!-- Ask user age -->
                     <div>Fascia di età</div>
-                    <input type="text" id="user_age" placeholder="Inserisci la tua età">
+
+                    <select id="user_age" required>
+                        <option value="20%Minorenne">Minorenne ( 0 - 17 )</option>
+                        <option value="Standard">Adulto ( 18 - 64 )</option>
+                        <option value="40%Over65">Over 65 ( +65 )</option>
+                    </select>
                 </div>
             </div>
 
@@ -80,7 +85,7 @@
                 <!-- type Ticket -->
                 <div class="data_ticket_item">
                     <h4>Offerta</h4>
-                    <div>Standard</div>
+                    <div id="ticket_type"></div>
                 </div>
 
                 <!-- code user Ticket -->
@@ -94,7 +99,13 @@
                     <h4>Cabina</h4>
                     <div id="cabin"></div>
                 </div>
-                
+
+                <!-- seat number -->
+                <div class="data_ticket_item">
+                    <h4>Posto</h4>
+                    <div id="seat"></div>
+                </div>
+
                 <!-- Price Ticket -->
                 <div  class="data_ticket_item">
                     <h4>Prezzo biglietto</h4>
@@ -102,12 +113,10 @@
                 </div>
 
             </div>
-            
         </section>
-
-
-      
     </main>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -19,9 +19,13 @@ header {
     height: 100px;
     text-align: center;
 }
-
+h1 {
+    line-height: 100px;
+    vertical-align: middle;
+}
 /* main */
 main {
+    height: calc( 100vh - 100px );
     background-color:  #b71b50;
     padding: 20px 0;
 }
@@ -64,6 +68,14 @@ input {
     padding: 10px;
 }
 
+select {
+    width: 200px;
+    height: 30px;
+    border: 2px solid#cb5e83;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0 10px;
+}
 
 
 /* button layout */
@@ -91,7 +103,7 @@ input {
 /* Ticket */
 .ticket {
     height: 300px;
-    display: flex;
+    display: none;
 }
 
 .data_user {
@@ -117,4 +129,8 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.active {
+    display: flex;
 }

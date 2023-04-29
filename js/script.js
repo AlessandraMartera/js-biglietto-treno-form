@@ -20,22 +20,27 @@ function calcTicketPrice () {
   
   //check user age
   // IF discount 20%
-  if (userAge<18)  {
+  if (userAge == "20%Minorenne" )  {
     discount = ticketPrice * 0.20;
     ticketPrice = ticketPrice - discount;
+    document.getElementById("ticket_type").innerHTML = `${userAge}`;
   }
 
   // ELSE IF discount 40%
-  else if(userAge>=65)  {
+  else if(userAge == "40%Over65")  {
       discount = ticketPrice * 0.40;
       ticketPrice = ticketPrice - discount;
+      document.getElementById("ticket_type").innerHTML = `${userAge}`;
   }
 
   // ELSE nothing discount 
   else {
       discount = 0;
       ticketPrice = ticketPrice - discount;
+      document.getElementById("ticket_type").innerHTML = `${userAge}`;
   } 
+  
+  document.querySelector(".ticket").classList.add("active");
 
   // stamp ticket price
   document.getElementById("price").innerHTML = ticketPrice.toFixed(2) + "€";
@@ -53,6 +58,13 @@ function calcTicketPrice () {
 
   console.log(codeCab);
   document.getElementById("cabin").innerHTML = codeCab;
+
+  // Generate a random number seat
+  let seat;
+  seat = Math.floor((Math.random( ) * 80) + 1 );
+
+  console.log(seat);
+  document.getElementById("seat").innerHTML = seat;
 }
 
 // Generate button
@@ -63,8 +75,11 @@ stampTicket.addEventListener ( "click", calcTicketPrice );
 cleanInput.addEventListener ( "click", 
   function() {
     document.getElementById("user_name").value = "";
+    document.getElementById("user_Surname").value = "";
     document.getElementById("user_km").value = "";
     document.getElementById("user_age").value = "";
+
+    document.querySelector(".ticket").classList.remove("active");
 
   }
 )
