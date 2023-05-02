@@ -59,7 +59,7 @@ section {
     color: #b71b50;
 }
 
-input {
+.input_layout input {
     width: 200px;
     height: 30px;
     border: 2px solid#cb5e83;
